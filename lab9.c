@@ -65,47 +65,50 @@ int main()
     int nItems;
     double W;
 
-int i;
+    int i;
 
-double weight[MAX_ITEMS];
+    double weight[MAX_ITEMS];
 
-double value[MAX_ITEMS];
+    double value[MAX_ITEMS];
 
-double ratio[MAX_ITEMS];
+        double ratio[MAX_ITEMS];
 
-printf("Enter the number of the items:\n");
+    printf("Enter the number of the items:\n");
 
-scanf("%d",&nItems);
+    scanf("%d",&nItems);
 
-printf("Enter the weights of the items:\n");
+    printf("Enter the weights of the items:\n");
 
-for(i=0;i<nItems;i++){
+    for(i=0;i<nItems;i++)
+    {
 
-scanf("%lf",&weight[i]);
+        scanf("%lf",&weight[i]);
 
-}
+    }
 
-printf("Enter the values/profits of the items:\n");
+    printf("Enter the values/profits of the items:\n");
 
-for(i=0;i<nItems;i++){
+    for(i=0;i<nItems;i++)
+    {
 
-scanf("%lf",&value[i]);
+        scanf("%lf",&value[i]);
 
-}
+    }
 
-for( i=0;i<nItems;i++){
+    for( i=0;i<nItems;i++)
+    {
 
-ratio[i]=value[i]/weight[i];
+        ratio[i]=value[i]/weight[i];
 
-}
+    }
 
-printf("Enter the capacity of the knapsack:");
+    printf("Enter the capacity of the knapsack:");
 
-scanf("%lf",&W);
+    scanf("%lf",&W);
 
-printf("\n The maximim value in a knapsack of capacity %2f is:%2f\n",W,computeMaxValue(W,weight,value,ratio,nItems));
+    printf("\n The maximim value in a knapsack of capacity %2f is:%2f\n",W,computeMaxValue(W,weight,value,ratio,nItems));
 
-return 0;
+    return 0;
 
 }
 
